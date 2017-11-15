@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Simulator : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	//Generate list of players then run games.
+
+	Player[] players;
+
+	private void Start() {
+		Tick();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	void Tick(){
+		//Debug.Log("Tock");
+		/*foreach(Player p in players){
+
+		}*/
 	}
 }

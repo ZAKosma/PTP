@@ -5,15 +5,18 @@ using UnityEngine;
 public class ValueCard : Card {
 	private int _value;
 	private bool _faceUp;
+
+	public ValueCard (int amt, bool revealed){
+		_value = amt;
+		_faceUp = revealed;
+	}
+
 	public int value {
 		get{
 			if(faceUp){
 				return _value;
 			}
-			return 0;
-		}
-		set{
-			_value = value;
+			return -1;
 		}
 	}
 
@@ -21,12 +24,9 @@ public class ValueCard : Card {
 		get{
 			return _faceUp;
 		}
-		set{
-			_faceUp = faceUp;
-		}
 	}
 
 	public void Flip(){
-		faceUp = !faceUp;
+		_faceUp = !faceUp;
 	}
 }

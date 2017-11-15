@@ -6,15 +6,18 @@ public class MultiplierCard : Card {
 
 	private int _value;
 	private bool _faceUp;
+
+	public MultiplierCard(int amt) {
+		_value = amt;
+		faceUp = false;
+	}
+
 	public int value {
 		get{
 			if(faceUp){
 				return _value;
 			}
 			return 0;
-		}
-		set{
-			_value = value;
 		}
 	}
 
